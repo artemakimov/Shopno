@@ -13,68 +13,12 @@
     <title>page</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            //Скрыть PopUp при загрузке страницы    
-            PopUpHide();
-            PopUpHide2();
-            PopUpHide3();
-            PopUpHide4();
-            PopUpHide5();
-            PopUpHide6();
-        });
-        function PopUpShow(){
-            $("#popup1").show();
-        }
-        function PopUpHide(){
-            $("#popup1").hide();
-        }
-
-        function PopUpShow2(){
-            $("#popup2").show();
-        }
-        function PopUpHide2(){
-            $("#popup2").hide();
-        }
-
-        function PopUpShow3(){
-            $("#popup3").show();
-        }
-        //Функция скрытия PopUp
-        function PopUpHide3(){
-            $("#popup3").hide();
-        }
-
-        function PopUpShow4(){
-            $("#popup4").show();
-        }
-        //Функция скрытия PopUp
-        function PopUpHide4(){
-            $("#popup4").hide();
-        }
-
-        function PopUpShow5(){
-            $("#popup5").show();
-        }
-        //Функция скрытия PopUp
-        function PopUpHide5(){
-            $("#popup5").hide();
-        }
-
-        function PopUpShow6(){
-            $("#popup6").show();
-        }
-        //Функция скрытия PopUp
-        function PopUpHide6(){
-            $("#popup6").hide();
-        }
-    </script>
+    <script src="src/popup_script.js"></script>
   </head>
   <body>
     <div class="header_bg">
       <div class="content-padding">
-        <img class="header__logo" src="/img/Logo.png" alt="Our logo">
+        <img class="header__logo" src="/src/Logo.png" alt="Our logo">
         <header class="header">
           
           <h1 class="header__first_title">
@@ -98,7 +42,7 @@
           </p>
           <div class="about-us__flex">
             <div class="about-us__pic">
-              <img src="img/Image about us.png" class="about-us__pic_chair"  alt="Photo of one of the workplaces">
+              <img src="src/Image about us.png" class="about-us__pic_chair"  alt="Photo of one of the workplaces">
             </div>
   
             <div class="about-us__text">
@@ -137,12 +81,12 @@
           <p class="featured-works_subtitle">LOREM IPSUM DOLOR SIT EVENT LANDING TEMPLATE</p>
           <div class="featured-works__pics__flex">
             <ul class="featured-works__pics">  
-              <li><a href="javascript:PopUpShow()"><img class="featured-works__pic" src="img/banner3.png"></a></li>
-              <li><a href="javascript:PopUpShow2()"><img class="featured-works__pic" src="img/5.png"></a></li>
-              <li><a href="javascript:PopUpShow3()"><img class="featured-works__pic" src="img/6.png"></a></li>
-              <li><a href="javascript:PopUpShow4()"><img class="featured-works__pic" src="img/work4.png"></a></li>
-              <li><a href="javascript:PopUpShow5()"><img class="featured-works__pic" src="img/9.png"></a></li>
-              <li><a href="javascript:PopUpShow6()"><img class="featured-works__pic" src="img/home_dietitian_sectionbg_1.png"></a></li>
+              <li><a href="javascript:PopUpShow()"><img class="featured-works__pic" src="src/banner3.png"></a></li>
+              <li><a href="javascript:PopUpShow2()"><img class="featured-works__pic" src="src/5.png"></a></li>
+              <li><a href="javascript:PopUpShow3()"><img class="featured-works__pic" src="src/6.png"></a></li>
+              <li><a href="javascript:PopUpShow4()"><img class="featured-works__pic" src="src/work4.png"></a></li>
+              <li><a href="javascript:PopUpShow5()"><img class="featured-works__pic" src="src/9.png"></a></li>
+              <li><a href="javascript:PopUpShow6()"><img class="featured-works__pic" src="src/home_dietitian_sectionbg_1.png"></a></li>
             </ul>
           </div>
         </section>
@@ -152,32 +96,32 @@
     <div>
       <div class="b-popup" id="popup1">
         <div class="b-popup-content">
-          <a href="javascript:PopUpHide()"><img class="featured-works_pic_popup" src="img/banner3.png" width="700" height="700"></a>
+          <a href="javascript:PopUpHide()"><img class="featured-works_pic_popup" src="src/banner3.png" width="700" height="700"></a>
         </div>
       </div>
       <div class="b-popup" id="popup2">
         <div class="b-popup-content">
-          <a href="javascript:PopUpHide2()"><img class="featured-works_pic_popup" src="img/5.png" width="700" height="700"></a>
+          <a href="javascript:PopUpHide2()"><img class="featured-works_pic_popup" src="src/5.png" width="700" height="700"></a>
         </div>
       </div>
       <div class="b-popup" id="popup3">
         <div class="b-popup-content">
-          <a href="javascript:PopUpHide3()"><img class="featured-works_pic_popup" src="img/6.png" width="700" height="700"></a>
+          <a href="javascript:PopUpHide3()"><img class="featured-works_pic_popup" src="src/6.png" width="700" height="700"></a>
         </div>
       </div>
       <div class="b-popup" id="popup4">
         <div class="b-popup-content">
-          <a href="javascript:PopUpHide4()"><img class="featured-works_pic_popup" src="img/work4.png" width="700" height="700"></a>
+          <a href="javascript:PopUpHide4()"><img class="featured-works_pic_popup" src="src/work4.png" width="700" height="700"></a>
         </div>
       </div> 
       <div class="b-popup" id="popup5">
         <div class="b-popup-content">
-          <a href="javascript:PopUpHide5()"><img class="featured-works_pic_popup" src="img/9.png" width="700" height="700"></a>
+          <a href="javascript:PopUpHide5()"><img class="featured-works_pic_popup" src="src/9.png" width="700" height="700"></a>
         </div>
       </div>
       <div class="b-popup" id="popup6">
         <div class="b-popup-content">
-          <a href="javascript:PopUpHide6()"><img class="featured-works_pic_popup" src="img/home_dietitian_sectionbg_1.png" width="700" height="700"></a>
+          <a href="javascript:PopUpHide6()"><img class="featured-works_pic_popup" src="src/home_dietitian_sectionbg_1.png" width="700" height="700"></a>
         </div>
       </div>   
     </div>
@@ -188,12 +132,12 @@
           <p class="team__title">SMALL TEAM</p>
           <p class="team__subtitle" >LOREM IPSUM DOLOR SIT EVENT LANDING TEMPLATE</p>
             <ul class= "team__pics_grid">
-              <li class="pic"><img class="team__pic" src="img/left up woman.png"></li>
-              <li><img class="team__pic" src="img/center up man.png"></li>
-              <li><img class="team__pic" src="img/right up man.png"></li>
-              <li><img class="team__pic" src="img/left down man.png"></li>
-              <li><img class="team__pic" src="img/center down woman.png"></li>
-              <li><img class="team__pic" src="img/right down woman.png"></li>
+              <li class="pic"><img class="team__pic" src="src/left up woman.png"></li>
+              <li><img class="team__pic" src="src/center up man.png"></li>
+              <li><img class="team__pic" src="src/right up man.png"></li>
+              <li><img class="team__pic" src="src/left down man.png"></li>
+              <li><img class="team__pic" src="src/center down woman.png"></li>
+              <li><img class="team__pic" src="src/right down woman.png"></li>
             </ul>
           </div>
         </section>
