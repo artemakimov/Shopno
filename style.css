@@ -16,7 +16,6 @@ body{
 }
 
 .header{
-  padding-bottom: 100px;
   margin-top: 60px;
   display: flex;
   flex-direction: column;
@@ -26,13 +25,14 @@ body{
 
 .header__logo{
   position: relative;
-  margin-left: 188px;
+  margin-left: 150px;
   display: flex;
   justify-content: flex-end;
   height: 45px;
   width: 110px;
-  margin-bottom: 170px;
+  margin-bottom: 200px;
 }
+
 
 .header__first_title {
   letter-spacing: 3px;
@@ -66,7 +66,7 @@ body{
   padding-top: 12px;
   text-align: center;
   border: 2px solid rgb(119, 120, 121);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   height: 50px;
   width: 230px;
@@ -78,12 +78,13 @@ body{
   text-decoration: none;
 }
 
+
 .header__img{
   width: 100px;
   height: 100px;
   margin-left: 1100px;
-  margin-bottom: 110px;
-  margin-right: 220px;
+  margin-bottom: 140px;
+  margin-right: 250px;
 }
 
 .header__button:hover{
@@ -103,21 +104,19 @@ body{
 }
 
 .about-us{
-  padding-top: 170px;
+  padding-top: 135px;
   background-color: rgb(248, 250, 250);
 }
 
 .about-us__flex{
-  height: 730px;
   display: flex;
   justify-content: center;
-  padding-bottom: 130px;
 }
 
 .about-us__title{
   letter-spacing: 2px;
   font-size: 40px;
-  font-weight: 800;
+  font-weight: bold;
   font-family: "Montserrat";
   text-align: center;
   text-transform: uppercase;
@@ -125,26 +124,29 @@ body{
   margin-bottom: 10px;
 }
 
+
 .about-us__subtitle{
   letter-spacing: 2px;
-  font-size: 17px;
+  font-size: 18px;
   font-family: "Merriweather";
   text-transform: uppercase;
-  line-height: 1.3;
+  line-height: 1;
   text-align: center;
-  margin-bottom: 110px;
+  margin-bottom: 130px;
 }
 
 .about-us__pic_chair{
   margin-right: 160px;
   width:430px;
   height:500px;
+  margin-bottom: 150px;
 }
 
 .about-us__text{
+  letter-spacing: 1px;
   margin-top: 20px;
   margin-bottom: 40px;
-  width: 450px;
+  width: 460px;
 }
 
 .about-us__first_text_title{
@@ -168,11 +170,11 @@ body{
 }
 
 .about-us__first_text_paragraph{
-  margin-top: 20px;
-  font-size: 16px;
+  margin-top: 45px;
+  font-size: 15px;
   font-family: "Raleway";
   line-height: 1.75;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 
 .about-us__second_text_title{
@@ -202,6 +204,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-bottom: 130px;
 }
 
@@ -220,64 +223,105 @@ body{
 }
 
 .featured-works_subtitle{
-  letter-spacing: 2px;
-  font-size: 17px;
+  letter-spacing: 1px;
+  font-size: 18px;
   font-family: "Merriweather";
   text-transform: uppercase;
   line-height: 1.3;
   text-align: center;
   margin-bottom: 110px;
+  margin-right: 53px;
 }
 
 .featured-works__item{
-  width: auto;
+  flex-wrap: wrap;
+
+  
+}
+.featured-works__pic{
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.featured-works__pic{
-  width: auto;
-  height: auto;
+.featured-works__pic:hover{
+  opacity: 0.7;
 }
 
 
 .featured-works__pics{
   display: flex;
   justify-content: center;
-
-  display:grid;
-  grid-template-columns: repeat(3, 25%);
-  grid-gap: 7px 3px;
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  grid-gap: 10px 14px;
 }
 
-.featured-works_pic_popup{
-  width:700px;
-  height:700px;
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 11111111111111111111111111111111111111111111111111111111111111111111111111; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
-.b-popup{
-  width:100%;
-  min-height:100%;
-  background-color: rgba(0,0,0,0.5);
-  overflow:hidden;
-  position:fixed;
-  top:0px;
-  z-index: 10000;
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
 }
-.b-popup .b-popup-content{
-  margin: 2% 27% auto;
-  width:700px;
-  height:720px;
-  padding:10px;
-  background-color: rgb(178, 242, 238);
-  border-radius:5px;
-  box-shadow: 0px 0px 10px #000;
+
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
 }
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
 
 .team__bg{
   background-color: rgb(249, 251, 251) ;
 }
 
 .team{
-  padding-bottom: 100px;
+  padding-bottom: 300px;
   padding-top: 100px;
   display: flex;
   flex-direction: column;
@@ -337,6 +381,7 @@ body{
   font-style: italic;
 }
 
+
 .team__block_text{
   font-size: 14px;
   margin-top: 20px;
@@ -389,8 +434,8 @@ body{
   display: flex;
   justify-content: center;
   display:grid;
-  grid-template-columns: repeat(3, 25%);
-  grid-gap: 7px 3px;
+  grid-template-columns: repeat(3, 370px);
+  grid-gap: 10px 12px;
 }
 
 .contacts {
