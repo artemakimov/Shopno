@@ -24,13 +24,9 @@ body{
 }
 
 .header__logo{
-  position: relative;
-  margin-left: 150px;
-  display: flex;
-  justify-content: flex-end;
   height: 45px;
   width: 110px;
-  margin-bottom: 200px;
+  margin-right: 62.5rem;
 }
 
 
@@ -40,8 +36,8 @@ body{
   font-size: 50px;
   font-family: "Montserrat";
   color: rgb(80, 80, 80);
-  text-shadow: 0px 9px 10px rgba(0, 0, 0, 0.24);
-  padding-top: 4rem;
+  text-shadow: 0px 9px 10px rgb(0 0 0 / 24%);
+  padding-top: 15rem;
   padding-bottom: 0.625rem;
 }
 
@@ -137,9 +133,9 @@ body{
 
 .about-us__pic_chair{
   margin-right: 160px;
-  width:430px;
-  height:500px;
-  margin-bottom: 150px;
+  width:400px;
+  height:490px;
+  box-shadow: 0px 0px 25px 0px rgba(82, 82, 82, 0.3);
 }
 
 .about-us__text{
@@ -193,6 +189,7 @@ body{
   font-size: 15px;
   font-family: "Raleway";
   line-height: 1.75;
+  padding-bottom: 120px;
 
 }
 
@@ -230,7 +227,6 @@ body{
   line-height: 1.3;
   text-align: center;
   margin-bottom: 110px;
-  margin-right: 53px;
 }
 
 .featured-works__item{
@@ -252,7 +248,7 @@ body{
   display: flex;
   justify-content: center;
   display: grid;
-  grid-template-columns: repeat(3, 370px);
+  grid-template-columns: repeat(3, 360px);
   grid-gap: 10px 14px;
 }
 
@@ -356,7 +352,7 @@ body{
 .block{
   display:none;
   margin-left:20px;
-  padding:35px;
+  padding:30px;
   margin-top:17px;
   background:rgb(110, 238, 228);
   height:250px;
@@ -365,6 +361,7 @@ body{
 }
 
 .team__block_title{
+  margin-top: 15px;
   letter-spacing: 2px;
   font-size: 20px;
   font-family: "Merriweather";
@@ -383,8 +380,10 @@ body{
 
 
 .team__block_text{
-  font-size: 14px;
-  margin-top: 20px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .team__block_icons{
@@ -648,7 +647,7 @@ body{
   }
 
   .header__logo{
-    margin-left: 118px;
+    margin-right: 700px;
   }
 
   .header__second_title{
@@ -660,7 +659,6 @@ body{
   }
 
   .about-us__pic_chair {
-    margin-right: 10px;
     width: 300px;
     height: 350px; 
   }
@@ -685,33 +683,30 @@ body{
     font-size: 11px;
   }
 
-  .b-popup .b-popup-content{
-    margin: 10% auto;
-    width: 600px;
-    height: 620px;
-  }  
-
-  .featured-works_pic_popup{
-    width: 600px;
-    height: 600px;
+  .modal{
+    padding-top: 110px;
   }
 
   .featured-works__pics{
+    grid-template-columns: repeat(3, 320px);
     grid-gap: 7px 10px;
   }
 
   .team__pics_grid{
+    grid-template-columns: repeat(3, 320px);
     grid-gap: 7px 10px;
   }
 
   .block{
+    margin-top: 100px;
     padding-top: 10%;
     height:200px;
-    width:220px;
+    width:280px;
   }
 
   .team__block_title{
     font-size: 11px;
+    margin: 0;
   }
 
   .team__block_subtitle{
@@ -719,12 +714,11 @@ body{
   }
 
   .team__block_text{
-    font-size: 9px;
-    margin-top: 10px;
+    font-size: 11px;
   }
 
   .team__block_icons{
-    margin-top: 10px;
+    margin: 0;
     display: flex;
   }
 
@@ -745,7 +739,7 @@ body{
 
   .block::after {
     position: absolute;
-    right: 175px; 
+    right: 225px; 
     top: -26px;
     border: 10px solid transparent; 
     border-bottom: 20px solid rgb(110, 238, 228);
@@ -757,21 +751,12 @@ body{
   }
 
 
-  .contacts__adress{
-    width: 280px;
-    height: 460px;
-  }
-
-  .contacts__map{
-    margin-top: 20px;
-    width: 240px;
-    height: 220px;
-    border:0;
-  }
+  
 }
 
 @media (max-width: 800px){
   .header__logo{
+    margin-right: 600px;
     width: 100px;
     height: 40px;
   }
@@ -789,6 +774,7 @@ body{
   }
 
   .header__img{
+    display:none;
     margin: auto;
     width: 80px;
     height: 80px;
@@ -855,15 +841,13 @@ body{
     align-items: center;
   }
 
-  .b-popup .b-popup-content{
-    margin: 3% 12% auto;
-    width: 600px;
-    height: 620px;
-  }  
 
-  .featured-works_pic_popup{
-    width: 600px;
-    height: 600px;
+  .modal{
+    padding-top: 110px;
+  }
+
+  .modal-content{
+    width: 60%;
   }
 
   .team__title{
@@ -881,6 +865,7 @@ body{
   }
 
   .block{
+    margin-top: 0;
     height:250px;
     width:330px;
   }
@@ -898,17 +883,15 @@ body{
   }
 
   .team__block_subtitle{
+
     font-size: 15px;
   }
 
   .team__block_text{
     font-size: 14px;
-    margin-top: 30px;
   }
 
   .team__block_icons{
-    margin-top: 30px;
-  
     display: flex;
   }
 
@@ -954,10 +937,9 @@ body{
 @media (max-width: 427px){
 
   .header__logo{
-    margin-left:0px;
     width: 80px;
     height: 30px;
-    margin-bottom: 80px;
+    margin: 0 auto;
   }
 
   .content-padding{
@@ -966,6 +948,7 @@ body{
   }
 
   .header__first_title{
+    padding-top: 7rem;
     font-size: 30px;
   }
 
@@ -980,6 +963,7 @@ body{
   .header__button{
     height: 45px;
     width: 180px;
+    font-size: 14px;
   }
 
   .header__img{
@@ -1046,15 +1030,12 @@ body{
     font-size: 18px;
   } 
 
-  .b-popup .b-popup-content{
-    margin: 25% 3% auto;
-    width: 400px;
-    height: 420px;
-  }  
+  .modal{
+    padding-top: 140px;
+  }
 
-  .featured-works_pic_popup{
-    width: 400px;
-    height: 400px;
+  .modal-content{
+    width: 80%;
   }
 
   .team__title{
@@ -1067,6 +1048,7 @@ body{
 
   .team__block_title{
     font-size: 19px;
+    margin: 0;
   }
 
   .team__block_subtitle{
@@ -1075,11 +1057,9 @@ body{
 
   .team__block_text{
     font-size: 17px;
-    margin-top: 30px;
   }
 
   .team__block_icons{
-    margin-top: 50px;
     display: flex;
   }
 
@@ -1148,16 +1128,6 @@ body{
 
 @media(max-width: 376px){
 
-  .b-popup .b-popup-content{
-    margin: 50% auto;
-    width: 360px;
-    height: 380px;
-  }  
-
-  .featured-works_pic_popup{
-    width: 360px;
-    height: 360px;
-  }
 
   .block{
     height:280px;
@@ -1181,11 +1151,9 @@ body{
 
   .team__block_text{
     font-size: 17px;
-    margin-top: 30px;
   }
 
   .team__block_icons{
-    margin-top: 30px;
     display: flex;
   }
 
@@ -1203,18 +1171,6 @@ body{
 }
 
 @media (max-width: 320px){
-
-  
-  .b-popup .b-popup-content{
-    margin: 50% 3% auto;
-    width: 300px;
-    height: 320px;
-  }  
-
-  .featured-works_pic_popup{
-    width: 300px;
-    height: 300px;
-  }
 
   .team__title{
     font-size: 20px;
@@ -1239,11 +1195,9 @@ body{
 
   .team__block_text{
     font-size: 12px;
-    margin-top: 20px;
   }
 
   .team__block_icons{
-    margin-top: 20px;
     display: flex;
   }
 
