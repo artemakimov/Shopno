@@ -4,7 +4,6 @@ html{
 
 body{
   font-family: "Montserrat";
-  
   margin: 0 auto;
   flex-wrap: wrap;
   overflow-x: hidden;
@@ -166,16 +165,6 @@ body{
   line-height: 1.75;  
 }
 
-.A_visual_approach_is_an_approach_to_a_runway_at {
-  font-size: 16px;
-  font-family: "Raleway";
-  color: rgba(0, 0, 0, 0.741);
-  line-height: 1.75;
-  width: 474px;
-  height: 212px;
-}
-
-
 
 .about-us__first_text_title{
   color: rgb(62, 63, 63);
@@ -216,8 +205,7 @@ body{
 .about-us__second_text{
   
   color: rgb(64, 65, 65);
-  text-align: justify;
-  font-size: 15px;
+  font-size: 16px;
   font-family: "Raleway";
   line-height: 1.75;
   padding-bottom: 120px;
@@ -387,7 +375,6 @@ body{
 }
 
 .block{
-  
   padding-top: 43px;
   display:none;
   margin-left: 30px;
@@ -422,16 +409,12 @@ body{
 
 
 .team__block_text{
-  
   padding-left:40px;
   font-size: 16px;
   padding-top: 20px;
-  padding-bottom: 25px;
   line-height: 1.5;
   text-align: left;
 }
-
-
 
 
 .team__block_icons{
@@ -700,26 +683,25 @@ body{
 
 
 @media (max-width: 1025px){
-  .content_padding{
-    margin-left: 120px;
-    margin-right: 120px;
+  .header{
+    width: auto;
   }
 
   .header__logo{
-    margin-right: 700px;
+    margin-right: 70%;
   }
 
   .header__second_title{
     font-size: 40px;
+    line-height: 1.75;
   }
 
   .header__img{
     margin-right: 400px;
   }
 
-  .about-us__pic_chair {
-    width: 300px;
-    height: 350px; 
+  .about-us{
+    width: auto;
   }
 
   .about-us__first_text_title{
@@ -727,11 +709,11 @@ body{
   }
 
   .about-us__first_text{
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .about-us__first_text_paragraph {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .about-us__second_text_title{
@@ -739,33 +721,52 @@ body{
   }
 
   .about-us__second_text{
-    font-size: 11px;
+    font-size: 14px;
   }
 
-  .modal{
-    padding-top: 110px;
+  .about-us__pic_chair {
+    margin-right:100px ;
+    width: 300px;
+    height: 350px; 
   }
 
   .featured-works__pics{
-    grid-template-columns: repeat(3, 320px);
-    grid-gap: 7px 10px;
+    width: auto;
   }
 
-  .team__pics_grid{
-    grid-template-columns: repeat(3, 320px);
-    grid-gap: 7px 10px;
+  .featured-works__item{
+    width: 300px;
+    margin-left: 10px;
+    margin-bottom: 10px;
   }
 
+  .modal-content{
+    width:60%;
+  }
+
+  .team__pics_flex{
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  .team__pic{
+    width: 300px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
   .block{
-    margin-top: 100px;
-    padding-top: 10%;
-    height:200px;
-    width:280px;
+    padding-top: 30px;
+    margin-left: 30px;
+    margin-top: 80px;
+    background: rgb(110, 238, 228);
+    height: 190px;
+    width: 270px;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
   }
 
   .team__block_title{
-    font-size: 11px;
-    margin: 0;
+    padding-left:30px;
+    font-size: 16px;
   }
 
   .team__block_subtitle{
@@ -773,10 +774,12 @@ body{
   }
 
   .team__block_text{
-    font-size: 11px;
+    padding-left:30px;
+    font-size: 13px;
   }
 
   .team__block_icons{
+    padding-left:30px;
     margin: 0;
     display: flex;
   }
@@ -804,18 +807,20 @@ body{
     border-bottom: 20px solid rgb(110, 238, 228);
   }
 
-  .contacts__textareas{
-    width: 475px;
-    height: 460px;
+  .contacts{
+    width: auto;
   }
 
-
-  
+  .contacts__adress{
+    width: 30%;
+  }
+  .contacts__textareas{
+    width: 60%;
+  }
 }
 
 @media (max-width: 800px){
   .header__logo{
-    margin-right: 600px;
     width: 100px;
     height: 40px;
   }
@@ -834,9 +839,6 @@ body{
 
   .header__img{
     display:none;
-    margin: auto;
-    width: 80px;
-    height: 80px;
   }
 
   .about-us__title{
@@ -845,7 +847,7 @@ body{
 
   .about-us__subtitle{
     font-size: 15px;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
   }
 
   .about-us{
@@ -863,7 +865,8 @@ body{
   .about-us__pic_chair{
     width: 300px;
     height: 400px;
-    margin-right: 70px;
+    margin-right:0;
+    margin-bottom: 100px;
   } 
 
   .about-us__first_text_title{
@@ -894,6 +897,10 @@ body{
     font-size: 15px;
   }
 
+  .featured-works__item{
+    margin-left: 0;
+  }
+
   .featured-works__pics{
     display: flex;
     flex-direction: column;
@@ -917,16 +924,19 @@ body{
     font-size: 15px;
   }
 
-  .team__pics_grid{
+  .team__pics_flex{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  .team__pic{
+    margin-left: 0;
+  }
+
   .block{
     margin-top: 0;
-    height:250px;
-    width:330px;
+    margin-left: 15px;
   }
 
   .poster:hover .block{
@@ -934,20 +944,20 @@ body{
   }
 
   .block::after {
-    right: 275px; 
+    right: 215px;
    }
   
   .team__block_title{
-    font-size: 18px;
+    font-size: 13px;
   }
 
   .team__block_subtitle{
 
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .team__block_text{
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .team__block_icons{
@@ -955,7 +965,7 @@ body{
   }
 
   .team__block_first_icon{
-    font-size: 18px;
+    font-size: 12px;
   }
 
   .team__block_icon{
@@ -1001,8 +1011,6 @@ body{
     margin: 0 auto;
   }
 
-
-
   .header__first_title{
     padding-top: 7rem;
     font-size: 30px;
@@ -1039,52 +1047,57 @@ body{
 
   .about-us__subtitle{
     font-size: 18px;
-    margin-bottom: 200px;
+    margin-bottom: 90px;
   }
 
   .about-us__pic_chair{
-    width: 200px;
-    height: 300px;
-    margin-right: 20px;
+    margin-right: 0px;
   } 
 
   .about-us__text{
-    width: auto;
-    padding-bottom: 60px;
+    width: 300px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
   }
 
   .about-us__first_text_title{
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .about-us__first_text{
-    font-size: 11px;
+    font-size: 15px;
   }
 
   .about-us__first_text_paragraph{
-    font-size: 11px;
-  }
-
-  .about-us__second_text_title{
     font-size: 14px;
   }
 
+  .about-us__second_text_title{
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
   .about-us__second_text{
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .featured-works{
-    padding-top: 20px;
+    padding-top: 0px;
+    padding-bottom: 120px;
   }
 
   .featured-works__title{
     font-size: 25px;
-    padding-top: 50px;
+    padding-top: 120px;
   }
 
   .featured-works_subtitle{
     font-size: 18px;
   } 
+
+  .team{
+    padding-bottom: 120px;
+  }
 
   .modal{
     padding-top: 140px;
@@ -1103,16 +1116,16 @@ body{
   }
 
   .team__block_title{
-    font-size: 19px;
+    font-size: 16px;
     margin: 0;
   }
 
   .team__block_subtitle{
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .team__block_text{
-    font-size: 17px;
+    font-size: 14px;
   }
 
   .team__block_icons{
@@ -1120,34 +1133,31 @@ body{
   }
 
   .team__block_first_icon{
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .team__block_icon{
-    font-size: 18px;
+    font-size: 14px;
   }
 
-  .block{
-    height:290px;
-    width:330px;
+  .team__block_link:hover{
+    font-size: 30px;
   }
 
   .poster:hover .block {
     display: block;
     position: absolute;
-    top: 120px; 
+    top: 150px;
     z-index: 9999;
   }
 
   .block::after {
     position: absolute;
-    right: 275px; 
+    right: 235px;
     top: -26px;
     border: 10px solid transparent; 
     border-bottom: 20px solid rgb(110, 238, 228);
-   }
-
-  
+  }
 
   .contacts__adress {
     width: 370px;
@@ -1169,7 +1179,6 @@ body{
 
   .contacts__button {
 
-    margin-left: 20px;
     font-weight: 600;
     margin-top: 30px;
     border-radius: 3px;
@@ -1178,7 +1187,11 @@ body{
   }
 
   .contacts {
-    padding-top: 70px;
+    padding-top: 120px;
+  }
+
+  .contacts__map{
+    width: 92%;
   }
 }
 
@@ -1186,13 +1199,13 @@ body{
 
 
   .block{
-    height:280px;
-    width:300px;
+    height:250px;
+    width:270px;
   }
 
   .block::after {
     position: absolute;
-    right: 250px; 
+    right: 220px; 
     top: -26px;
     border: 10px solid transparent; 
     border-bottom: 20px solid rgb(110, 238, 228);
@@ -1237,8 +1250,24 @@ body{
   }
 
   .block{
-    height:230px;
-    width:250px;
+    top:140px;
+    height:250px;
+    width:270px;
+  }
+
+  .block::after {
+    position: absolute;
+    right: 240px; 
+    top: -26px;
+    border: 10px solid transparent; 
+    border-bottom: 20px solid rgb(110, 238, 228);
+  }
+  .team__block_text{
+    font-size: 17px;
+  }
+
+  .team__block_icons{
+    display: flex;
   }
 
   .team__block_title{
@@ -1249,13 +1278,7 @@ body{
     font-size: 13px;
   }
 
-  .team__block_text{
-    font-size: 12px;
-  }
 
-  .team__block_icons{
-    display: flex;
-  }
 
   .team__block_first_icon{
     font-size: 15px;
@@ -1302,7 +1325,6 @@ body{
   }
 
   .contacts__button {
-    margin-left: 20px;
     font-weight: 600;
     margin-top: 30px;
     border-radius: 3px;
