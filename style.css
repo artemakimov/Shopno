@@ -21,7 +21,7 @@ body{
 
 .header{
   padding-top: 64px;
-  padding-bottom: 134px;
+  padding-bottom: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -218,25 +218,23 @@ body{
 }
 
 .featured-works__bg{
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 65px 10.5% 150px 10.5%;
   background-color: rgb(255, 255, 255);
 }
 
 .featured-works{
   display: flex;
+  background-size:cover;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 130px;
+  padding-top: 130px;
 }
 
 .featured-works__title{
   letter-spacing: 2px;
   font-weight: 800;
   font-size: 40px;
-  padding-top:130px;
   display: flex;
   justify-content: center;
   font-family: "Montserrat";
@@ -344,16 +342,17 @@ body{
 
 
 .team__bg{
-  padding: 150px 10.5% 150px 10.5%;
-  margin: 0 auto;
-  width: 1440px;
   background-color: rgb(249, 251, 251) ;
 }
 
 .team{
   display: flex;
+  background-size:cover;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding-bottom: 130px;
+  padding-top: 130px;
 }
 
 .team__title {
@@ -378,13 +377,14 @@ body{
 }
 
 .poster{
+  
   position:relative;
 }
 
 .block{
   padding-top: 43px;
   display:none;
-  margin-left: 30px;
+  margin-left: 15px;
   margin-top:25px;
   background:rgb(110, 238, 228);
   height:240px;
@@ -451,6 +451,7 @@ body{
 }
 
 .poster:hover .block{
+  
   display:block;
   position:absolute;
   top:160px;
@@ -465,6 +466,7 @@ body{
   top: -26px;
   border: 10px solid transparent; 
   border-bottom: 20px solid rgb(110, 238, 228);
+  
  }
 
 
@@ -488,9 +490,8 @@ body{
   padding-bottom: 90px;
   display: flex;
   justify-content: center;
-  width: 1147px;
-  margin: 0 auto;
 }
+
 .contacts__bg_linear{
   
   background-image: linear-gradient(to bottom, rgb(249, 251, 251), rgba(255, 255, 255, 0.903), rgba(255, 255, 255, 0.974), rgba(255, 255, 255, 0.719));
@@ -635,16 +636,15 @@ body{
   height: 240px;
   border:0;
 }
-
+.footer__bg{
+  background-color: rgb(38, 43, 46);
+}
 .footer{
-  margin: 0 auto;
-  width: 1440px;
   padding-top: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(38, 43, 46);
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 }
 
 .footer__text{
@@ -701,9 +701,6 @@ body{
     width: auto;
   }
 
-  .header__logo{
-    margin-right: 70%;
-  }
 
   .header__second_title{
     font-size: 40px;
@@ -738,8 +735,8 @@ body{
 
   .about-us__pic_chair {
     margin-right:100px ;
-    width: 300px;
-    height: 350px; 
+    width: 390px;
+    height: 490px; 
   }
 
   .featured-works__pics{
