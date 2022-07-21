@@ -14,7 +14,7 @@
   </head>
   <body>
     <header class="header_bg">
-        <section class="header">
+        <section class="header container">
           <img class="header__logo" src="src/logo_shopno.png" alt="Our logo">
           <h1 class="header__first_title">
             SAY HELLO TO <span class="header__selected_text">SHOPNO!</span>
@@ -27,9 +27,8 @@
         </section>
     </header>
     <main class="main-content">
-      <section class="about-us__bg">
-        
-          <div class="about-us">
+      <section class="about-us__bg ">
+          <div class="about-us container">
             <h2 class="about-us__title">ABOUT US</h2>
     
             <p class="about-us__subtitle">
@@ -68,7 +67,7 @@
           </div>
         
       </section>
-      <section class="featured-works__bg">
+      <section class="featured-works__bg container">
         
           <div class="featured-works">
             <h2 class="featured-works__title">FEATURED WORKS</h2>
@@ -97,15 +96,7 @@
                   <img class="featured-works__pic" src="src/home_dietitian_sectionbg_1.png" alt="Pic of our project">
                 </li>
               </ul>
-              <div id="myModal" class="modal">
-
-                <!-- The Close Button -->
-                <span class="close">&times;</span>
-
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01" src="#">
-
-              </div>
+              
           </section>
         
       </div> 
@@ -245,7 +236,7 @@
       
       <section class="contacts__bg">
         <div class="contacts__bg_linear ">
-          
+        
             <div  class="contacts">
               <div class="contacts__textareas" id="contacts">
                 <form class="contacts__form"></form>
@@ -286,6 +277,16 @@
         <li class="footer__logos_direction_element"><a href="http://dribbble.com" class="footer__logos_hrefs"><i class="fab fa-dribbble footer__icon fa-fw"></i></a></li>
       </ul>
     </footer>
+
+    <div id="myModal" class="modal">
+
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01" src="#">
+
+    </div>
 
     <script src="src/popup_script.js"></script>
   </body>
