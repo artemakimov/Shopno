@@ -1,6 +1,15 @@
 html{
   scroll-behavior:smooth;
 }
+/* (1. 1 класс для заголовков, убрать паддинг и маржин в отдельный класс)
+2. (max height для картинок)
+3. (при адаптиве убрать у item ширину мороженка и высоту и челики)
+4. (общий класс для модалки)
+5. (непосредственно центровка модалки)?
+6. (очень много всего одинакового)
+7. (почистить медиа запросы)
+8. (хедеры)
+9.бэм*/
 
 body{
   font-family: "Montserrat";
@@ -9,17 +18,17 @@ body{
 
 .container{
   width:100%;
-  max-width: 1440px;
+  max-width: 1170px;
   margin:0 auto;
-  padding-left: 150px;
-  padding-right: 150px;
-}
-
-.header_bg{
-  background-color: rgb(239,240,242); 
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .header{
+  background-color: rgb(239,240,242); 
+}
+
+.header__container{
   padding-top: 64px;
   padding-bottom: 120px;
   display: flex;
@@ -29,14 +38,14 @@ body{
   background-size:cover
 }
 
-.header__logo{
+.header__container__logo{
   align-self: flex-start;
   height: 45px;
   width: 110px;
 }
 
-
-.header__first_title {
+.header__container__text{
+  letter-spacing: 2px;
   font-size: 45px;
   font-family: "Montserrat";
   color: rgb(80, 80, 80);
@@ -44,36 +53,24 @@ body{
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0px 9px 10px rgba(0, 0, 0, 0.24);
+}
+
+.header__container__first- {
   padding-top: 208px;
   padding-bottom: 16px;
 }
 
-
-
-
-.header__second_title{
-  letter-spacing: 2px;
-  font-size: 45px;
-  font-family: "Montserrat";
-  color: rgb(80, 80, 80);
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1;
-  text-align: center;
-  text-shadow: 0px 9px 10px rgba(0, 0, 0, 0.24);
+.header__container__second-{
   margin-bottom: 9.375rem;
 }
 
-
-
-.header__selected_text{
+.header__container__selected-text{
   font-weight: 700;
   box-shadow: -10px 0 0 rgb(178, 242, 238), 10px 0 0 rgb(178, 242, 238);
   background-color: rgb(178, 242, 238);
 }
 
-.header__button{
-  padding-top: 12px;
+.header__container__button{
   text-align: center;
   border: 2px solid rgb(119, 120, 121);
   font-size: 18px;
@@ -89,29 +86,29 @@ body{
 }
 
 
-.header__img{
+.header__container__img{
   align-self:flex-end;
   width: 100px;
   height: 100px;
 }
 
-.header__button:hover{
+.header__container__button:hover{
   transition-delay: 0;
   transition: all 0.5s;
   box-shadow: 10px 10px 0px rgb(178, 242, 238);
 }
 
-.header__button:active{
+.header__container__button:active{
   transition-delay: 0;
   transition: all 0.5s;
   box-shadow: 0px 0px 0px rgba(82, 82, 82, 0.24);
 }
 
-.about-us__bg{
+.about-us{
   background-color: rgb(248,250,250);
 }
 
-.about-us{
+.about-us__container{
   padding-top: 135px;
   padding-bottom: 120px;
   display: flex;
@@ -128,7 +125,7 @@ body{
 }
 
 
-.about-us__title{
+.about-us__container__title{
   letter-spacing: 1px;
   font-size: 38px;
   font-weight: 800;
@@ -141,7 +138,7 @@ body{
 
 
 
-.about-us__subtitle{
+.about-us__container__subtitle{
   letter-spacing: 1px;
   font-size: 18px;
   font-family: "Merriweather";
@@ -152,7 +149,7 @@ body{
 }
 
 
-.about-us__pic_chair{
+.about-us__flex__pic-chair{
   float: left;
   margin-right: 10rem;
   width: 390px;
@@ -171,7 +168,7 @@ body{
 }
 
 
-.about-us__first_text_title{
+.about-us__text__first-text-title{
   color: rgb(62, 63, 63);
   font-size: 20px;
   font-family: "Merriweather";
@@ -182,14 +179,14 @@ body{
 }
 
 
-.about-us__first_text{
+.about-us__text__first-text{
   font-size: 16px;
   font-family: "Raleway";
   color: rgba(0, 0, 0, 0.741);
   line-height: 1.75;
 }
 
-.about-us__first_text_paragraph{
+.about-us__text__first-text-paragraph{
   margin-top: 45px;
   font-size: 16px;
   font-family: "Raleway";
@@ -197,7 +194,7 @@ body{
   margin-bottom: 45px;
 }
 
-.about-us__second_text_title{
+.about-us__text__second-text-{
   color: rgb(62, 63, 63);
   font-size: 20px;
   font-family: "Merriweather";
@@ -207,8 +204,7 @@ body{
   margin-bottom: 20px;
 }
 
-.about-us__second_text{
-  
+.about-us__text__second-text{
   color: rgb(64, 65, 65);
   font-size: 16px;
   font-family: "Raleway";
@@ -217,11 +213,11 @@ body{
 
 }
 
-.featured-works__bg{
+.featured-works{
   background-color: rgb(255, 255, 255);
 }
 
-.featured-works{
+.featured-works__container{
   display: flex;
   background-size:cover;
   flex-direction: column;
@@ -231,7 +227,7 @@ body{
   padding-top: 130px;
 }
 
-.featured-works__title{
+.featured-works__container__title{
   letter-spacing: 2px;
   font-weight: 800;
   font-size: 40px;
@@ -244,7 +240,7 @@ body{
   margin-bottom: 20px;
 }
 
-.featured-works_subtitle{
+.featured-works__container__subtitle{
   letter-spacing: 1px;
   font-size: 18px;
   font-family: "Merriweather";
@@ -254,34 +250,32 @@ body{
   margin-bottom: 110px;
 }
 
-.featured-works__pics{
+.featured-works__pics-flex{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 1150px;
-  gap: 7px 10px;
+  width: 100%;
+  gap: 10px;
 }
 
-.featured-works__item{
+.featured-works__pics-flex__item{
   max-width: 370px;
+  max-height: 359px;
 }
 
-.featured-works__pic{
+.featured-works__pics-flex__item__pic{
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.featured-works__pic:hover{
+.featured-works__pics-flex__item__pic:hover{
   opacity: 0.7;
 }
-
-
 
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 11111111111111111111111111111111111111111111111111111111111111111111111111; /* Sit on top */
+  z-index: 2; /* Sit on top */
   padding-top: 50px; /* Location of the box */
   left: 0;
   top: 0;
@@ -324,7 +318,6 @@ body{
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
-  transition: 0.3s;
 }
 
 .close:hover,
@@ -341,11 +334,11 @@ body{
 }
 
 
-.team__bg{
+.team{
   background-color: rgb(249, 251, 251) ;
 }
 
-.team{
+.team__container{
   display: flex;
   background-size:cover;
   flex-direction: column;
@@ -355,7 +348,7 @@ body{
   padding-top: 130px;
 }
 
-.team__title {
+.team__container__title {
   letter-spacing: 2px;
   font-weight: 800;
   font-size: 38px;
@@ -366,7 +359,7 @@ body{
   margin-bottom: 20px;
 }
 
-.team__subtitle{
+.team__container__subtitle{
   letter-spacing: 2px;
   font-size: 17px;
   font-family: "Merriweather";
@@ -376,24 +369,24 @@ body{
   margin-bottom: 110px;
 }
 
-.poster{
-  
+.teammem-poster{
+  max-width: 370px;
+  max-height: 440px;
   position:relative;
 }
 
-.block{
-  padding-top: 43px;
+.teammem-tooltip{
   display:none;
-  margin-left: 15px;
-  margin-top:25px;
   background:rgb(110, 238, 228);
-  height:240px;
-  width:340px;
   box-shadow:0 5px 5px rgba(0,0,0,0.3);
 }
 
-.team__block_title{
-  padding-left:40px;
+.teammem-tooltip__padding{
+  padding-left:5%;
+}
+
+.teammem-tooltip__title{
+  padding-top: 20px;
   text-align: left;
   font-size: 20px;
   letter-spacing: 1px;
@@ -405,7 +398,7 @@ body{
 
 
 
-.team__block_subtitle{
+.teammem-tooltip__subtitle{
   letter-spacing: 1px;
   font-size: 14px;
   font-family: "Merriweather";
@@ -415,8 +408,7 @@ body{
 }
 
 
-.team__block_text{
-  padding-left:40px;
+.teammem-tooltip__text{
   font-size: 16px;
   padding-top: 20px;
   line-height: 1.5;
@@ -424,76 +416,70 @@ body{
 }
 
 
-.team__block_icons{
-  padding-left:40px;
+.teammem-tooltip__icons{
   display: flex;
 }
-.team__block_first_icon{
+
+.teammem-tooltip__icons__first-icon{
   font-size: 12px;
 }
 
-.team__block_icon{
+.teammem-tooltip__icons__item{
   margin-left: 10px;
   font-size: 12px;
 }
 
-.team__block_link{
+.teammem-tooltip__icons__link{
   color: black;
   transition-delay: 0;
   transition: all 0.5s;
 }
 
-.team__block_link:hover{
-  color: black;
+.teammem-tooltip__icons__link:hover{
   font-size: 40px;
   transition-delay: 0;
   transition: all 0.5s;
 }
 
-.poster:hover .block{
-  
+.teammem-poster:hover .teammem-tooltip{
   display:block;
   position:absolute;
-  top:160px;
-  z-index:9999;
-  
+  bottom:4%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 90%;
+  height: 55%;
+  z-index: 999;
+  padding: 20px 15px;
 }
 
-.block::after {
+.teammem-tooltip::after {
   content: ''; 
   position: absolute;
-  right: 290px; 
+  right: 80%; 
   top: -26px;
   border: 10px solid transparent; 
   border-bottom: 20px solid rgb(110, 238, 228);
   
- }
+}
 
-
-
-.team__pics_flex{
-  width: 1150px;
-  gap: 7px 10px;
+.team__container__pics-flex{
+  width: 100%;
+  gap: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.team__pic{
-  max-width: 370px;
-}
 
-
-
-.contacts {
+.contacts__container {
   padding-top: 150px;
   padding-bottom: 90px;
   display: flex;
   justify-content: center;
 }
 
-.contacts__bg_linear{
-  
+.contacts_linear{
   background-image: linear-gradient(to bottom, rgb(249, 251, 251), rgba(255, 255, 255, 0.903), rgba(255, 255, 255, 0.974), rgba(255, 255, 255, 0.719));
   background-position: 50% 50%;
   background-origin: padding-box;
@@ -503,25 +489,26 @@ body{
   background-size: inherit;
 }
 
-.contacts__bg{
+.contacts{
   background-image: url(src/christmas_snow_trees-wide.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.contacts__textareas{
+.contacts__container__textareas{
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 615px;
+  max-width: 615px;
   margin-right: 25px;
   background-color: rgba(2, 22, 35, 0.71);
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-  width: 635px;
-  height: 460px;
 }
 
 
-.contacts__textareas_input{
-  margin-left: 2rem;
+.textareas__form__input{
   font-size: 15px;
   font-family: "Raleway";
   color: rgba(255, 255, 255, 0.6);
@@ -535,17 +522,14 @@ body{
   outline: none;
   overflow: hidden;
   white-space: nowrap;
-  margin-right: 30px;
 }
 
-.contacts__textareas_input::placeholder{
+.textareas__form__input::placeholder{
   color: rgba(255, 255, 255, 0.377);
 }
 
-.contacts__textareas_input_message{
+.textareas__form__message{
   margin-top: 10px;
-  margin-right: 30px;
-  margin-left: 2rem;
   font-size: 15px;
   font-family: "Raleway";
   color: rgba(255, 255, 255, 0.507);
@@ -559,19 +543,20 @@ body{
   background-color: rgba(2, 22, 35, 0);
   outline: none;
 }
-.contacts__textareas_input_message::placeholder{
+.textareas__form__message::placeholder{
   color: rgba(255, 255, 255, 0.377);
 }
 
-.contacts__message_text {
+.contacts__container__message_text {
   font-size: 15px;
   font-family: "Raleway";
   color: rgba(255, 255, 255, 0.702);
   line-height: 3.4;
 }
 
-.contacts__button{
-  margin-left: 2rem;
+.textareas__form__button{
+  height: 50px;
+  max-width: 245px;
   font-weight: 600;
   margin-top: 30px;
   background-color: rgb(110, 238, 228);
@@ -579,41 +564,39 @@ body{
   font-family: "Montserrat";
   text-transform: uppercase;
   border-radius: 3px;
-  width: 240px;
-  height: 50px;
   text-align: center;
   letter-spacing: 3px;
   border: none;
   transition: all 0.8s;
 }
 
-.contacts__button:hover{
+.textareas__form__button:hover{
   border: 6px solid rgb(4, 240, 220);
   background-color: rgb(157, 238, 233);
   transition-delay: 0;
   transition: all 0.5s;
 }
 
-.contacts__adress{
+.communication-option{
   width: 500px;
-  height: 460px;
+  max-width: 500px;
   padding-top: 25px;
   padding-bottom: 30px;
   padding-left: 20px;
   background-color: rgba(2, 22, 35, 0.71);
 }
 
-.contacts__adress__text{
+.communication-option__text{
   font-size: 15px;
   font-family: "Raleway";
   color: rgba(255, 255, 255, 0.702);
 }
 
-.contacts__adress__text_online{
+.communication-option__online{
   margin-top: 30px;
 }
 
-.contacts__link{
+.communication-option__link{
   font-size: 15px;
   font-family: "Raleway";
   color: rgba(255, 255, 255, 0.702);
@@ -623,23 +606,23 @@ body{
   text-decoration:none;
 }
 
-.contacts__link:hover{
+.communication-option__link:hover{
   transition-delay: 0;
   transition: all 0.5s;
   color: rgb(110, 238, 228);
   text-decoration:none;
 }
 
-.contacts__map{
+.communication-option__map{
   margin-top: 20px;
   width: 95%;
   height: 240px;
   border:0;
 }
-.footer__bg{
+.footer{
   background-color: rgb(38, 43, 46);
 }
-.footer{
+.footer__container{
   padding-top: 70px;
   display: flex;
   flex-direction: column;
@@ -647,7 +630,7 @@ body{
   padding-bottom: 60px;
 }
 
-.footer__text{
+.footer__container__text{
   font-size: 14px;
   font-family: "Raleway";
   color: rgba(255, 255, 255, 0.8);
@@ -660,14 +643,14 @@ body{
   font-size: 20px;
 }
 
-.footer__logos{
+.social-networks{
   display: flex;
   justify-content: center;
 }
 
 
 
-.footer__logos_hrefs{
+.social-networks__link{
   background-color: rgb(66, 70, 72);
   background-size: 10px;
   margin-right: 10px;
@@ -677,12 +660,11 @@ body{
   transition: all 0.5s;
 }
 
-.footer__logos_direction_element{
+.social-networks__item{
   text-align: center;
 }
 
-
-.footer__logos_hrefs:hover{
+.social-networks__link:hover{
   color:black;
   background-color: rgb(110, 238, 228);
   background-size: cover;
@@ -691,219 +673,131 @@ body{
   transition: all 0.5s;
 }
 
-
 @media (max-width: 1025px){
-  .container{
-    padding-left:15px;
-    padding-right: 15px;
-  }
   .header{
     width: auto;
-  }
+  }  
 
-
-  .header__second_title{
-    font-size: 40px;
-    line-height: 1.75;
-  }
-
-  
-
-  .about-us{
+  .about-us__container{
     width: auto;
   }
 
-  .about-us__first_text_title{
+  .about-us__text__first-text-title{
     font-size: 15px;
   }
 
-  .about-us__first_text{
+  .about-us__text__first-text{
     font-size: 14px;
   }
 
-  .about-us__first_text_paragraph {
-    font-size: 14px;
-  }
 
-  .about-us__second_text_title{
+  .about-us__text__second-text-{
     font-size: 15px;
   }
 
-  .about-us__second_text{
-    font-size: 14px;
-  }
-
-  .about-us__pic_chair {
+  .about-us__flex__pic-chair {
     margin-right:100px ;
     width: 390px;
     height: 490px; 
   }
 
-  .featured-works__pics{
-    width: auto;
-  }
 
-  .featured-works__item{
-    width: 300px;
-  }
+
 
   .modal-content{
     width:60%;
   }
 
-  .team__pics_flex{
-    width: auto;
-    margin-bottom: 10px;
-  }
-
-  .team__pic{
-    width: 300px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-  .block{
-    padding-top: 30px;
-    margin-left: 30px;
-    margin-top: 80px;
-    background: rgb(110, 238, 228);
-    height: 190px;
-    width: 270px;
-    box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
-  }
-
-  .team__block_title{
-    padding-left:30px;
+  .teammem-tooltip__title{
     font-size: 16px;
   }
 
-  .team__block_subtitle{
+  .teammem-tooltip__subtitle{
     font-size: 11px;
   }
 
-  .team__block_text{
-    padding-left:30px;
+  .teammem-tooltip__text{
     font-size: 13px;
   }
 
-  .team__block_icons{
-    padding-left:30px;
+  .teammem-tooltip__icons{
     margin: 0;
-    display: flex;
   }
 
-  .team__block_first_icon{
+
+
+  .teammem-tooltip__icons__item{
     font-size: 10px;
   }
 
-  .team__block_icon{
-    font-size: 10px;
-  }
-
-  .poster:hover .block {
-    display: block;
-    position: absolute;
-    top: 70px; 
-    z-index: 9999;
-  }
-
-  .block::after {
-    position: absolute;
-    right: 225px; 
-    top: -26px;
-    border: 10px solid transparent; 
-    border-bottom: 20px solid rgb(110, 238, 228);
-  }
-
-  .contacts{
-    width: auto;
-  }
-
-  .contacts__adress{
-    width: 30%;
-  }
-  .contacts__textareas{
-    width: 60%;
-  }
 }
 
 @media (max-width: 800px){
-  .header__logo{
+  .header__container__logo{
     width: 100px;
     height: 40px;
   }
 
-  .header__first_title{
-    font-size: 40px;
-  }
-
-  .header__second_title{
-    font-size: 25px;
-  }
-
-  .header__button{
-    margin-bottom: 80px;
-  }
-
-  .header__img{
-    display:none;
-  }
-
-  .about-us__title{
+  .header__container__text{
     font-size: 30px;
   }
 
-  .about-us__subtitle{
+  .header__container__button{
+    margin-bottom: 80px;
+  }
+
+  .header__container__img{
+    display:none;
+  }
+
+  .about-us__container__title{
+    font-size: 30px;
+  }
+
+  .about-us__container__subtitle{
     font-size: 15px;
     margin-bottom: 150px;
   }
 
-  .about-us{
+  .about-us__container{
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
   .about-us__flex{
-    display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
-  .about-us__pic_chair{
+  .about-us__flex__pic-chair{
     width: 300px;
     height: 400px;
     margin-right:0;
     margin-bottom: 100px;
   } 
   .about-us__text{
-    width: 100%
+    width: 100%;
+    margin: 0;
   }
 
-  .about-us__first_text_title{
+  .about-us__text__first-text-title{
     font-size: 17px;
   }
 
-  .about-us__first_text{
+  .about-us__text__first-text-paragraph{
     font-size: 14px;
   }
 
-  .about-us__first_text_paragraph{
-    font-size: 14px;
-  }
-
-  .about-us__second_text_title{
+  .about-us__text__second-text-{
     font-size: 17px;
   }
 
-  .about-us__second_text{
-    font-size: 14px;
-  }
 
-  .featured-works__title{
+  .featured-works__container__title{
     font-size: 30px;
   }
 
-  .featured-works_subtitle{
+  .featured-works__container__subtitle{
     font-size: 15px;
   }
 
@@ -913,99 +807,59 @@ body{
     align-items: center;
   }
 
-
-  .modal{
-    padding-top: 110px;
-  }
-
   .modal-content{
     width: 60%;
   }
 
-  .team__title{
+  .team__container__title{
     font-size: 30px;
   }
 
-  .team__subtitle{
+  .team__container__subtitle{
     font-size: 15px;
   }
 
-  .team__pics_flex{
-    display: flex;
+  .team__container__pics-flex{
     flex-direction: column;
     align-items: center;
   }
 
-  .team__pic{
-    margin-left: 0;
+
+  .teammem-tooltip__subtitle{
+    font-size: 14px;
   }
 
-  .block{
-    margin-top: 0;
-    margin-left: 15px;
-  }
-
-  .poster:hover .block{
-    top:160px;
-  }
-
-  .block::after {
-    right: 215px;
-   }
-  
-  .team__block_title{
-    font-size: 13px;
-  }
-
-  .team__block_subtitle{
-
-    font-size: 12px;
-  }
-
-  .team__block_text{
-    font-size: 12px;
-  }
-
-  .team__block_icons{
-    display: flex;
-  }
-
-  .team__block_first_icon{
-    font-size: 12px;
-  }
-
-  .team__block_icon{
-    font-size: 18px;
-  }
-
-  .team__block_link:hover{
-    color: black;
-    font-size: 40px;
-    transition-delay: 0;
-    transition: all 0.5s;
+  .teammem-tooltip__text{
+    font-size: 14px;
   }
 
 
-  .contacts {
+
+  .teammem-tooltip__icons__first-icon{
+    font-size: 15px;
+  }
+
+  .teammem-tooltip__icons__item{
+    font-size: 15px;
+  }
+
+
+
+  .contacts__container {
     flex-direction: column-reverse;
     align-items: center;
   }
 
-  .contacts__adress{
-    width: 370px;
-    height: 460px;
+  .communication-option{
+    width: 100%;
     padding-left: 30px;
     margin-bottom: 20px;
   }
 
-  .contacts__map{
-    width: 310px;
-  }
-
-  .contacts__textareas{
-    width: 370px;
-    height: 460px;
+  .contacts__container__textareas{
+    width: 100%;
     margin-right: 0px;
+    padding-bottom: 20px;
   }
 } 
 
@@ -1016,19 +870,6 @@ body{
     height: 30px;
     margin: 0 auto;
   }
-
-  .header__first_title{
-    padding-top: 7rem;
-    font-size: 30px;
-  }
-
-  .header__second_title{
-    font-size: 25px;
-  }
-
-  .header__second_title{
-    margin-bottom: 70px;
-  }
   
   .header__button{
     height: 45px;
@@ -1037,161 +878,97 @@ body{
   }
 
 
-  .about-us{
+  .about-us__container{
     padding-top: 120px;
     background-color: rgb(248, 250, 250);
   }
 
-  .about-us__title{
+  .about-us__container__title{
     font-size: 25px;
   }
 
-  .about-us__subtitle{
+  .about-us__container__subtitle{
     font-size: 18px;
     margin-bottom: 90px;
   }
 
-  .about-us__pic_chair{
-    margin-right: 0px;
-  } 
-
-  .about-us__text{
-    width: 300px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-  }
-
-  .about-us__first_text_title{
+  .about-us__text__first-text-title{
     font-size: 16px;
   }
 
-  .about-us__first_text{
+  .about-us__text__first-text{
     font-size: 15px;
   }
 
-  .about-us__first_text_paragraph{
-    font-size: 14px;
-  }
-
-  .about-us__second_text_title{
+  .about-us__text__second-text-{
     font-size: 16px;
     margin-bottom: 20px;
   }
 
-  .about-us__second_text{
-    font-size: 14px;
-  }
 
-  .featured-works{
-    padding-top: 0px;
+  .featured-works__container{
+    padding-top: 120px;
     padding-bottom: 120px;
   }
 
-  .featured-works__title{
+  .featured-works__container__title{
     font-size: 25px;
-    padding-top: 120px;
   }
 
-  .featured-works_subtitle{
+  .featured-works__container__subtitle{
     font-size: 18px;
   } 
 
-  .team{
+  .team__container{
     padding-bottom: 120px;
   }
 
-  .modal{
-    padding-top: 140px;
-  }
 
   .modal-content{
     width: 80%;
   }
 
-  .team__title{
+  .team__container__title{
     font-size: 25px;
   }
 
-  .team__subtitle{
-    font-size: 15px;
-  }
-
-  .team__block_title{
-    font-size: 16px;
+  .teammem-tooltip__title{
     margin: 0;
   }
 
-  .team__block_subtitle{
+  .teammem-tooltip__subtitle{
     font-size: 15px;
   }
 
-  .team__block_text{
+
+
+
+  .teammem-tooltip__icons__first-icon{
     font-size: 14px;
   }
 
-  .team__block_icons{
-    display: flex;
-  }
-
-  .team__block_first_icon{
+  .teammem-tooltip__icons__item{
     font-size: 14px;
   }
 
-  .team__block_icon{
-    font-size: 14px;
-  }
-
-  .team__block_link:hover{
+  .teammem-tooltip__icons__link:hover{
     font-size: 30px;
   }
 
-  .poster:hover .block {
-    display: block;
-    position: absolute;
-    top: 150px;
-    z-index: 9999;
-  }
-
-  .block::after {
-    position: absolute;
-    right: 235px;
-    top: -26px;
-    border: 10px solid transparent; 
-    border-bottom: 20px solid rgb(110, 238, 228);
-  }
-
-  .contacts__adress {
-    width: 370px;
-    height: 460px;
+  .communication-option {
     margin-right: 0px;
-    margin-bottom: 20px;
   }
 
-  .contacts__map{
-    width: 210px;
+  .communication-option__map{
     padding-bottom: 10px;
   }
 
-  .contacts__textareas{
-    margin-right: 0px;
-    width: 370px;
-    height: 460px;
-  }
-
-  .contacts__button {
-
+  .textareas__form__button {
     font-weight: 600;
-    margin-top: 30px;
     border-radius: 3px;
-    width: 310px;
-    height: 50px;
   }
 
-  .contacts {
-    padding-top: 120px;
-  }
-
-  .contacts__map{
+  .communication-option__map{
     width: 92%;
   }
 }
@@ -1199,143 +976,57 @@ body{
 @media(max-width: 376px){
 
 
-  .block{
-    height:250px;
-    width:270px;
-  }
-
-  .block::after {
-    position: absolute;
-    right: 220px; 
-    top: -26px;
-    border: 10px solid transparent; 
-    border-bottom: 20px solid rgb(110, 238, 228);
-  }
-
-  .poster:hover .block {
-    display: block;
-    position: absolute;
-    top: 80px; 
-    z-index: 9999;
-  }
-
-  .team__block_text{
-    font-size: 17px;
-  }
-
-  .team__block_icons{
-    display: flex;
-  }
-
-  .contacts__adress{
-    width: 340px;
-    height: 460px;
-    padding-left: 30px;
+  .communication-option{
     margin-bottom: 20px;
   }
 
-  .contacts__textareas{
-    width: 340px;
-    height: 460px;
-  }
 }
 
 @media (max-width: 320px){
 
-  .team__title{
+  .team__container__title{
     font-size: 20px;
   }
 
-  .team__subtitle{
+  .team__container__subtitle{
     font-size: 11px;
   }
 
-  .block{
-    top:140px;
-    height:250px;
-    width:270px;
+  .teammem-tooltip__text{
+    padding-top: 5px;
+    font-size: 11px;
   }
 
-  .block::after {
-    position: absolute;
-    right: 240px; 
-    top: -26px;
-    border: 10px solid transparent; 
-    border-bottom: 20px solid rgb(110, 238, 228);
-  }
-  .team__block_text{
-    font-size: 17px;
+  .teammem-tooltip__title{
+    padding-top: 0;
+    font-size: 12px;
   }
 
-  .team__block_icons{
-    display: flex;
-  }
-
-  .team__block_title{
-    font-size: 15px;
-  }
-
-  .team__block_subtitle{
+  .teammem-tooltip__subtitle{
     font-size: 13px;
   }
 
-
-
-  .team__block_first_icon{
-    font-size: 15px;
+  .teammem-tooltip__icons__first-icon{
+    font-size: 12px;
   }
 
-  .team__block_icon{
-    font-size: 18px;
+  .teammem-tooltip__icons__item{
+    font-size: 12px;
   }
 
-  .poster:hover .block {
-    display: block;
-    position: absolute;
-    top: 70px; 
-    z-index: 9999;
-  }
-
-  .block::after {
-    position: absolute;
-    right: 195px; 
-    top: -26px;
-    border: 10px solid transparent; 
-    border-bottom: 20px solid rgb(110, 238, 228);
-  }
-
-  .contacts__adress {
-    width: 280px;
-    height: 460px;
-    margin-right: 0px;
-    margin-bottom: 20px;
-  }
-
-  .featured-works__title{
+  .featured-works__container__title{
     font-size: 20px;
   }
 
-  .contacts__map{
-    width: 220px;
+  .communication-option__map{
     padding-bottom: 10px;
   }
 
-  .contacts__textareas{
-    width: 280px;
-    height: 460px;
-  }
-
-  .contacts__button {
-    font-weight: 600;
+  .textareas__form__button {
     margin-top: 30px;
-    border-radius: 3px;
-    width: 220px;
-    height: 40px;
   }
 
-  .contacts {
+  .contacts__container {
     padding-top: 70px;
   }
-
-
 }
