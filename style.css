@@ -365,11 +365,7 @@ body {
   position: relative;
 }
 
-.teammem-tooltip {
-  display: none;
-  background: rgb(110, 238, 228);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-}
+
 
 .teammem-tooltip__padding {
   padding-left: 5%;
@@ -426,9 +422,17 @@ body {
   transition-delay: 0;
   transition: all 0.5s;
 }
+.teammem-tooltip {
+  opacity: 0;
+  transition: 2s;
+  background: rgb(110, 238, 228);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px 15px;
+}
 
 .teammem-poster:hover .teammem-tooltip {
-  transition-delay: 10s;
+  opacity:1; 
+  transition: 2s;
   display: block;
   position: absolute;
   bottom: 4%;
@@ -441,6 +445,8 @@ body {
 }
 
 .teammem-tooltip::after {
+  opacity:1; 
+  transition: 1s;
   content: "";
   position: absolute;
   right: 80%;
@@ -806,6 +812,18 @@ body {
   .team__pics-flex {
     flex-direction: column;
     align-items: center;
+  }
+
+  .teammem-tooltip {
+    opacity: 0;
+    transition: 0;
+    display: none;
+  }
+  
+  .teammem-poster:hover .teammem-tooltip {
+    opacity:1; 
+    transition: 0;
+    display: block;
   }
 
   .teammem-tooltip__subtitle {
