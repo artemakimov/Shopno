@@ -2,7 +2,7 @@
 let modal = document.getElementById("myModal");
 
 let modalImg = document.getElementById("img01");
-const images = document.querySelectorAll('img.featured-works__pics-flex__item__pic');
+const images = document.querySelectorAll('img.featured-works__pics-flex_item_pic');
 
 images.forEach(img => {
   img.addEventListener('click' , (event) =>{
