@@ -818,18 +818,7 @@ body {
     flex-direction: column;
     align-items: center;
   }
-
-  .teammem-tooltip {
-    opacity: 0;
-    transition: 0;
-    display: none;
-  }
   
-  .teammem-poster:hover .teammem-tooltip {
-    opacity:1; 
-    transition: 0;
-    display: block;
-  }
 
   .teammem-tooltip__subtitle {
     font-size: 14px;
