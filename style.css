@@ -366,7 +366,6 @@ body {
 }
 
 
-
 .teammem-tooltip__padding {
   padding-left: 5%;
 }
@@ -423,7 +422,7 @@ body {
   transition: all 0.5s;
 }
 .teammem-tooltip {
-  opacity: 0;
+  opacity: 1;
   transition: 2s;
   background: rgb(110, 238, 228);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
