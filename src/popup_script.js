@@ -6,7 +6,6 @@ const images = document.querySelectorAll('img.featured-works__pics-flex_item_pic
 
 images.forEach(img => {
   img.addEventListener('click' , (event) =>{
-    console.log(event.target.src)
     modal.style.display = "block";
     modalImg.src = event.target.src;
   })
