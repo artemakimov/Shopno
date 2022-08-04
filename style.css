@@ -371,10 +371,6 @@ body {
   height: 440px;
 }
 
-@media screen and (max-width: 450px) {
-  
-}
-
 
 .teammem-poster__pic {
   position: absolute;
