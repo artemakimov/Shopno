@@ -363,6 +363,7 @@ body {
 }
 
 .teammem-poster {
+  cursor: pointer;
   position: relative;
   width: 370px;
   height: 440px;
